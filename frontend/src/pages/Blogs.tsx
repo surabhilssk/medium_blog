@@ -16,24 +16,14 @@ export const Blogs = () => {
         <AppBar />
         <div className="flex justify-center">
             <div className="max-w-xl">
-                <BlogCard
-                    authorName="Surabhil S Kumar"
-                    title="How an ugly single page website makes $5000 a month without affiliate marketing"
-                    content="How an ugly single page website makes $5000 a month without affiliate marketing which is very surprising if you think 
-                    about it"
+                {blogs.map(function(blog){
+                    return <BlogCard
+                    id={blog.id}
+                    authorName= {blog.author.name}
+                    title={blog.title}
+                    content={blog.content}
                     publishedDate="2nd Feb 2024" />
-                    <BlogCard
-                    authorName="Surabhil S Kumar"
-                    title="How an ugly single page website makes $5000 a month without affiliate marketing"
-                    content="How an ugly single page website makes $5000 a month without affiliate marketing which is very surprising if you think 
-                    about it"
-                    publishedDate="2nd Feb 2024" />
-                    <BlogCard
-                    authorName="Surabhil S Kumar"
-                    title="How an ugly single page website makes $5000 a month without affiliate marketing"
-                    content="How an ugly single page website makes $5000 a month without affiliate marketing which is very surprising if you think 
-                    about it"
-                    publishedDate="2nd Feb 2024" />
+                })}
             </div>
         </div>
     </div>
