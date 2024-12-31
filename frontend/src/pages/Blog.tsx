@@ -9,7 +9,7 @@ export function Blog(){
     });
     if(loading){
         return <div>
-            Loading...
+                Loading...
         </div>
     }
     if (!blog) {
